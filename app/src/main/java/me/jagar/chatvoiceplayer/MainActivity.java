@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         voicePlayerView = findViewById(R.id.voicePlayerView);
         checkPermissions();
+        voicePlayerView.isLoaded = true;
         voicePlayerView.setAudio(Environment.getExternalStorageDirectory().getPath() + File.separator + "song.mp3");
     }
 
@@ -89,4 +90,6 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         voicePlayerView.onPause();
     }
+
+
 }

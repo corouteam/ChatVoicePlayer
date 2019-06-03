@@ -12,14 +12,24 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="5dp">
+
+            <ProgressBar
+                android:id="@+id/loadingBar"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:visibility="visible" />
+
             <ImageView
-                android:clickable="true"
                 android:id="@+id/imgPlay"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:background="@drawable/play_pause_bg"
+                android:clickable="true"
+                android:focusable="true"
                 android:src="@drawable/ic_play_arrow_white_24dp"
-                android:focusable="true" />
+                android:visibility="gone" />
             <ImageView
                 android:clickable="true"
                 android:id="@+id/imgPause"
@@ -63,12 +73,13 @@
                 android:clickable="true"
                 android:textStyle="bold"
                 android:focusable="true" />
+
             <ProgressBar
+                android:id="@+id/progressBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:id="@+id/progressBar"
-                android:visibility="gone"/>
+                android:visibility="gone" />
         </LinearLayout>
 
 
