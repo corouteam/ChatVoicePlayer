@@ -19,17 +19,15 @@
                 android:layout_weight="1"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:visibility="visible" />
+                android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/imgPlay"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:background="@drawable/play_pause_bg"
-                android:clickable="true"
-                android:focusable="true"
                 android:src="@drawable/ic_play_arrow_white_24dp"
-                android:visibility="gone" />
+                android:focusable="true" />
             <ImageView
                 android:clickable="true"
                 android:id="@+id/imgPause"

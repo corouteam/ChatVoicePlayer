@@ -41,7 +41,7 @@ import java.net.URLConnection;
     private Context context;
     private String path;
     private String shareTitle = "Share Voice";
-    public boolean isLoaded = false;
+    //public boolean isLoaded = false;
 
     private LinearLayout main_layout, padded_layout, container_layout;
     private ImageView imgPlay, imgPause, imgShare;
@@ -203,10 +203,8 @@ import java.net.URLConnection;
 
         @Override
         public void onStartTrackingTouch(SeekBar seekBar) {
-                imgPause.setVisibility(View.GONE);
-                imgPlay.setVisibility(View.VISIBLE);
-
-
+            imgPause.setVisibility(View.GONE);
+            imgPlay.setVisibility(View.VISIBLE);
         }
 
         @Override
