@@ -138,14 +138,13 @@ import java.net.URLConnection;
 
         path = AudioPath;
         mediaPlayer =  new MediaPlayer();
-        handleLoading();
+
         if (AudioPath != null) {
             try {
                 mediaPlayer.setDataSource(AudioPath);
                 mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
                 mediaPlayer.prepare();
                 mediaPlayer.setVolume(10, 10);
-
                 //START and PAUSE are in other listeners
                 mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
@@ -157,9 +156,8 @@ import java.net.URLConnection;
                 mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
-                            imgPause.setVisibility(View.GONE);
-                            imgPlay.setVisibility(View.VISIBLE);
-
+                        imgPause.setVisibility(View.GONE);
+                        imgPlay.setVisibility(View.VISIBLE);
                     }
                 });
 
@@ -270,32 +268,6 @@ import java.net.URLConnection;
         }
     };
 
-    public void onAudioUploaded(){
-        loadingBar.setVisibility(GONE);
-        imgPlay.setVisibility(VISIBLE);
-    }
-
-    public void audioIsUploading(){
-        loadingBar.setVisibility(VISIBLE);
-        imgPlay.setVisibility(GONE);
-        imgPause.setVisibility(GONE);
-
-    }
-
-    public void handleLoading(){
-            if(isLoaded){
-                loadingBar.setVisibility(GONE);
-                imgPlay.setVisibility(View.VISIBLE);
-                imgPause.setVisibility(View.GONE);
-            }else {
-                loadingBar.setVisibility(VISIBLE);
-                imgPlay.setVisibility(View.GONE);
-                imgPause.setVisibility(View.GONE);
-            }
-
-
-    }
-
     //Updating seekBar in realtime
     private void update(final MediaPlayer mediaPlayer, final TextView time, final SeekBar seekBar, final Context context) {
         ((Activity)context).runOnUiThread(new Runnable() {
@@ -366,11 +338,8 @@ import java.net.URLConnection;
         }catch (Exception e){
             e.printStackTrace();
         }
-            imgPause.setVisibility(View.GONE);
-            imgPlay.setVisibility(View.VISIBLE);
-            loadingBar.setVisibility(View.GONE);
-
-
+        imgPause.setVisibility(View.GONE);
+        imgPlay.setVisibility(View.VISIBLE);
     }
 
 
