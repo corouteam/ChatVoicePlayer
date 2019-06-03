@@ -366,11 +366,10 @@ import java.net.URLConnection;
         }catch (Exception e){
             e.printStackTrace();
         }
-        if(isLoaded){
             imgPause.setVisibility(View.GONE);
             imgPlay.setVisibility(View.VISIBLE);
             loadingBar.setVisibility(View.GONE);
-        }
+
 
     }
 
